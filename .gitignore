@@ -1,4 +1,5 @@
 .idea
+migrations
 
 *.sqlite3
 *.pyc
