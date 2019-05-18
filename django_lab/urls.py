@@ -18,6 +18,7 @@ from django.urls import path
 
 import portol.views
 import dicts.views
+import marketdata.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +30,8 @@ urlpatterns = [
     path('dicts/create/', dicts.views.dict_create, name='dict_create'),
     path('dicts/<str:name>/update/', dicts.views.DictUpdateView.as_view(), name='dict_update'),
     path('dicts/detail/', dicts.views.detail, name='dict_detail'),
+
+    path('marketdata/hello_tushare/', marketdata.views.hello_tushare, name='md_hello_tushare'),
+    path('marketdata/get_h_data/', marketdata.views.get_h_data, name='md_get_h_data'),
+    path('marketdata/get_hist_data/', marketdata.views.get_hist_data, name='md_get_hist_data'),
 ]

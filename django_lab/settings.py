@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # own
     'portol',
     'dicts',
+    'marketdata',
 ]
 
 MIDDLEWARE = [
