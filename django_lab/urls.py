@@ -16,6 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+import portol.views
+import dicts.views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', portol.views.index, name='index'),
+    path('hello/', portol.views.hello_world, name='hello'),
+    path('about/', portol.views.about, name='about'),
+    path('datetime/', portol.views.current_datetime, name='datetime'),
+
+    path('dicts/create/', dicts.views.dict_create, name='dict_create'),
+    path('dicts/<str:name>/update/', dicts.views.DictUpdateView.as_view(), name='dict_update'),
+    path('dicts/detail/', dicts.views.detail, name='dict_detail'),
 ]

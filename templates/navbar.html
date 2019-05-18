@@ -1,0 +1,13 @@
+<nav>
+    <ul>
+        <li><a href="{% url 'index' %}">index</a></li>
+        <li><a href="{% url 'hello' %}">hello</a></li>
+        <li><a href="{% url 'datetime' %}">datetime</a></li>
+        <li><a href="{% url 'about' %}">about</a></li>
+        <li><ul>
+            <li><a href="{% url 'dict_create' %}">dict_create</a></li>
+            <li><a href="{% url 'dict_detail' %}">dict_detail</a></li>
+        </ul></li>
+    </ul>
+    <input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+</nav>

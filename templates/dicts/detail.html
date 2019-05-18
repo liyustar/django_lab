@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Dicts Detial.</h1>
+    <ul>
+    {% for detail in objs %}
+        <li>{{ detail.name }}, {{ detail.desc }}, {{ detail.dataType }}    <a href="{% url 'dict_update' name=detail.name %}">update</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
