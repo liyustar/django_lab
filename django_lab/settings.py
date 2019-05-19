@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     # own
+    'frontend',
     'portol',
     'dicts',
     'marketdata',
