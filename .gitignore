@@ -1,5 +1,7 @@
 .idea
 migrations
 
+node_modules
+
 *.sqlite3
 *.pyc
