@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 import portol.views
 import dicts.views
@@ -31,6 +31,7 @@ urlpatterns = [
     path('dicts/<str:name>/update/', dicts.views.DictUpdateView.as_view(), name='dict_update'),
     path('dicts/detail/', dicts.views.detail, name='dict_detail'),
 
+    path(r'marketdata/', include('marketdata.urls')),
     path('marketdata/hello_tushare/', marketdata.views.hello_tushare, name='md_hello_tushare'),
     path('marketdata/get_h_data/', marketdata.views.get_h_data, name='md_get_h_data'),
     path('marketdata/get_hist_data/', marketdata.views.get_hist_data, name='md_get_hist_data'),
