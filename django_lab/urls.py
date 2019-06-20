@@ -23,7 +23,7 @@ import marketdata.views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', include('frontend.urls')),
+    # path('', include('frontend.urls')),
     # path('', portol.views.index, name='index'),
     path('hello/', portol.views.hello_world, name='hello'),
     path('about/', portol.views.about, name='about'),

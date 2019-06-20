@@ -15,6 +15,11 @@ conda env export > environment.yaml
 conda env create -f environment.yaml
 ```
 
+# 开发时前端编译
+```
+npm run dev
+```
+
 # 服务启动
 ```
 python manager.py runserver
